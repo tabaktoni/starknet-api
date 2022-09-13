@@ -1,0 +1,2729 @@
+{
+	"info": {
+		"_postman_id": "7779de17-22ee-49ce-ab34-4be27c0f25a9",
+		"name": "starknet",
+		"description": "Starknet Devenet Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9227788"
+	},
+	"item": [
+		{
+			"name": "feeder gateway",
+			"item": [
+				{
+					"name": "get_block",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_block",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_block"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_block_traces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_block_traces?blockNumber=latest",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_block_traces"
+							],
+							"query": [
+								{
+									"key": "blockNumber",
+									"value": "latest"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fg get_contract_addresses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_contract_addresses",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_contract_addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "call_contract",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entry_point_selector\": \"0x362398bec32bc0ebb411203221a35a0301193a96f317ebe5e40be9f60d15320\",\n    \"calldata\": [\n        \"10\"\n    ],\n    \"signature\": [],\n    \"contract_address\": \"0x256e835bb26d9acae43b747cb0e04124907608311137185aef65559ee5f61b9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/feeder_gateway/call_contract?blockNumber=pending",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"call_contract"
+							],
+							"query": [
+								{
+									"key": "blockNumber",
+									"value": "pending"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "fg call_contract",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entry_point_selector\": \"0x2f0b3c5710379609eb5495f1ecd348cb28167711b73609fe565a72734550354\",\n    \"calldata\": [\n        \"3115174808656846022129950072744275264472597267198601635297513001234245526852\",\n        \"500000\",\n        \"0\"\n    ],\n    \"signature\": [],\n    \"contract_address\": \"0x74676cb2378dde326c60e1b239eb89761e964b82ad481e7eb17f92a4b36b233\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5050/feeder_gateway/call_contract",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5050",
+									"path": [
+										"feeder_gateway",
+										"call_contract"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "fg call_contract",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entry_point_selector\": \"0x362398bec32bc0ebb411203221a35a0301193a96f317ebe5e40be9f60d15320\",\n    \"calldata\": [\n        \"10\"\n    ],\n    \"signature\": [],\n    \"contract_address\": \"0x256e835bb26d9acae43b747cb0e04124907608311137185aef65559ee5f61b9\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5050/feeder_gateway/call_contract?blockNumber=pending",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5050",
+									"path": [
+										"feeder_gateway",
+										"call_contract"
+									],
+									"query": [
+										{
+											"key": "blockNumber",
+											"value": "pending"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "get_code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_code?contractAddress=0x03576490f57D1c6DA0847538d3d5aaAbC402F62454DBA7Bb28242Ffb5276D5f1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_code"
+							],
+							"query": [
+								{
+									"key": "contractAddress",
+									"value": "0x03576490f57D1c6DA0847538d3d5aaAbC402F62454DBA7Bb28242Ffb5276D5f1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_full_contract",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_full_contract?contractAddress=0x03576490f57D1c6DA0847538d3d5aaAbC402F62454DBA7Bb28242Ffb5276D5f1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_full_contract"
+							],
+							"query": [
+								{
+									"key": "contractAddress",
+									"value": "0x03576490f57D1c6DA0847538d3d5aaAbC402F62454DBA7Bb28242Ffb5276D5f1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_class_hash_at",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_class_hash_at?contractAddress=0x03576490f57D1c6DA0847538d3d5aaAbC402F62454DBA7Bb28242Ffb5276D5f1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_class_hash_at"
+							],
+							"query": [
+								{
+									"key": "contractAddress",
+									"value": "0x03576490f57D1c6DA0847538d3d5aaAbC402F62454DBA7Bb28242Ffb5276D5f1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_class_by_hash",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_class_by_hash?classHash=0x25ec026985a3bf9d0cc1fe17326b245dfdc3ff89b8fde106542a3ea56c5a918",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_class_by_hash"
+							],
+							"query": [
+								{
+									"key": "classHash",
+									"value": "0x25ec026985a3bf9d0cc1fe17326b245dfdc3ff89b8fde106542a3ea56c5a918"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_storage_at",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_storage_at?contractAddress=0x050ddc5B92Ede4f883bF0daACEaE7004652dEb49D8aD3ECd8830389e4a10a383&key=1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_storage_at"
+							],
+							"query": [
+								{
+									"key": "contractAddress",
+									"value": "0x050ddc5B92Ede4f883bF0daACEaE7004652dEb49D8aD3ECd8830389e4a10a383"
+								},
+								{
+									"key": "key",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_transaction_status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_transaction_status?transactionHash=0x4c100f8056647bda5c808afebc253988849d0d2c167d693ed00d9442a16a9f7",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_transaction_status"
+							],
+							"query": [
+								{
+									"key": "transactionHash",
+									"value": "0x4c100f8056647bda5c808afebc253988849d0d2c167d693ed00d9442a16a9f7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_transaction?transactionHash=0x70962afa989cd1bb26f475f2b1de4aaaf018c46223bf66158a71f10f3c56b40",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_transaction"
+							],
+							"query": [
+								{
+									"key": "transactionHash",
+									"value": "0x70962afa989cd1bb26f475f2b1de4aaaf018c46223bf66158a71f10f3c56b40"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_transaction_receipt",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_transaction_receipt?transactionHash=0x70962afa989cd1bb26f475f2b1de4aaaf018c46223bf66158a71f10f3c56b40",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_transaction_receipt"
+							],
+							"query": [
+								{
+									"key": "transactionHash",
+									"value": "0x70962afa989cd1bb26f475f2b1de4aaaf018c46223bf66158a71f10f3c56b40"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_transaction_trace",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_transaction_trace?transactionHash=0x34fb3b096363bb0831fbff7ba68f4ab6719b1850bb8697fcbcc39873105a1a5",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_transaction_trace"
+							],
+							"query": [
+								{
+									"key": "transactionHash",
+									"value": "0x34fb3b096363bb0831fbff7ba68f4ab6719b1850bb8697fcbcc39873105a1a5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_state_update",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_state_update",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_state_update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_nonce",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/get_nonce?contractAddress=0x6022604b0e42c9ef95ad35be441a8644f8fbff8e063d34531bb5afbc3dd38e7&blockNumber=pending",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"get_nonce"
+							],
+							"query": [
+								{
+									"key": "contractAddress",
+									"value": "0x6022604b0e42c9ef95ad35be441a8644f8fbff8e063d34531bb5afbc3dd38e7"
+								},
+								{
+									"key": "blockNumber",
+									"value": "pending"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "simulate_transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/feeder_gateway/simulate_transaction?block_hash=0x8a30a1212d142cb0053fe9921e1dbf64f651d328565bd2e7ac24059c270f43",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"simulate_transaction"
+							],
+							"query": [
+								{
+									"key": "block_hash",
+									"value": "0x8a30a1212d142cb0053fe9921e1dbf64f651d328565bd2e7ac24059c270f43"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estimate_fee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entry_point_selector\": \"0x2f0b3c5710379609eb5495f1ecd348cb28167711b73609fe565a72734550354\",\n    \"calldata\": [\n        \"3115174808656846022129950072744275264472597267198601635297513001234245526852\",\n        \"500000\",\n        \"0\"\n    ],\n    \"signature\": [],\n    \"contract_address\": \"0x62230ea046a9a5fbc261ac77d03c8d41e5d442db2284587570ab46455fd2488\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/feeder_gateway/estimate_fee",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"estimate_fee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "estimate_fee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entry_point_selector\": \"0x362398bec32bc0ebb411203221a35a0301193a96f317ebe5e40be9f60d15320\",\n    \"calldata\": [\n        \"100\"\n    ],\n    \"signature\":[],\n    \"contract_address\": \"0x30dcab5fbba3472295061a62cb0e19145fc3163b19724e59c6160091c889483\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/feeder_gateway/estimate_fee",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"feeder_gateway",
+										"estimate_fee"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "estimate_fee_devent",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entry_point_selector\": \"0x15d40a3d6ca2ac30f4031e42be28da9b056fef9bb7357ac5e85627ee876e5ad\",\n    \"calldata\": [\n        \"100\"\n    ],\n    \"signature\": [],\n    \"contract_address\": \"0x30dcab5fbba3472295061a62cb0e19145fc3163b19724e59c6160091c889483\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/feeder_gateway/estimate_fee",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"feeder_gateway",
+										"estimate_fee"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "estimate_fee Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entry_point_selector\": \"0x2f0b3c5710379609eb5495f1ecd348cb28167711b73609fe565a72734550354\",\n    \"calldata\": [\n        \"3115174808656846022129950072744275264472597267198601635297513001234245526852\",\n        \"500000\",\n        \"0\"\n    ],\n    \"signature\": [],\n    \"contract_address\": \"0x62230ea046a9a5fbc261ac77d03c8d41e5d442db2284587570ab46455fd2488\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/feeder_gateway/estimate_fee",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"feeder_gateway",
+								"estimate_fee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "estimate_fee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entry_point_selector\": \"0x362398bec32bc0ebb411203221a35a0301193a96f317ebe5e40be9f60d15320\",\n    \"calldata\": [\n        \"100\"\n    ],\n    \"signature\":[],\n    \"contract_address\": \"0x30dcab5fbba3472295061a62cb0e19145fc3163b19724e59c6160091c889483\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/feeder_gateway/estimate_fee",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"feeder_gateway",
+										"estimate_fee"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "estimate_fee_devent",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entry_point_selector\": \"0x15d40a3d6ca2ac30f4031e42be28da9b056fef9bb7357ac5e85627ee876e5ad\",\n    \"calldata\": [\n        \"100\"\n    ],\n    \"signature\": [],\n    \"contract_address\": \"0x30dcab5fbba3472295061a62cb0e19145fc3163b19724e59c6160091c889483\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/feeder_gateway/estimate_fee",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"feeder_gateway",
+										"estimate_fee"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "add_transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/gateway/add_transaction",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"gateway",
+								"add_transaction"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "devnet",
+			"item": [
+				{
+					"name": "postman",
+					"item": [
+						{
+							"name": "load_l1_messaging_contract",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/postman/load_l1_messaging_contract",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"postman",
+										"load_l1_messaging_contract"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "flush",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/postman/flush",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"postman",
+										"flush"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "set_time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"time\": 120\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5050/set_time",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"set_time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "increase_time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"time\": 120\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5050/set_time",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"set_time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "account_balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5050/account_balance?address=0x0513493b4Fe460031d445fFACacACf3B19196a05Fd146Ed1609B7248101eF847",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"account_balance"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "0x0513493b4Fe460031d445fFACacACf3B19196a05Fd146Ed1609B7248101eF847"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5050/restart",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"restart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "is_alive",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5050/is_alive",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"is_alive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dump chain state",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"path\": \"/Users/eedev/Downloads/dump\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5050/dump",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"dump"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "load chain state",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"path\": \"/Users/eedev/Downloads/dump\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5050/load",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"load"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "predeployed_accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5050/predeployed_accounts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"predeployed_accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mint",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"0x0513493b4Fe460031d445fFACacACf3B19196a05Fd146Ed1609B7248101eF847\",\n    \"amount\": 1000e18\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5050/mint",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"mint"
+							]
+						},
+						"description": "lint is optional parameter"
+					},
+					"response": [
+						{
+							"name": "mint lite",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"address\": \"0x6e3205f9b7c4328f00f718fdecf56ab31acfb3cd6ffeb999dcbac41236ea502\",\n   \"amount\": 500000,\n   \"lite\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5050/mint",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5050",
+									"path": [
+										"mint"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "meinheld/1.0.2"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jun 2022 19:42:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"new_balance\": 10000,\n    \"unit\": \"wei\"\n}"
+						},
+						{
+							"name": "mint",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"address\": \"0x6e3205f9b7c4328f00f718fdecf56ab31acfb3cd6ffeb999dcbac41236ea502\",\n    \"amount\": 500000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5050/mint",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5050",
+									"path": [
+										"mint"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "api",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"0x6e3205f9b7c4328f00f718fdecf56ab31acfb3cd6ffeb999dcbac41236ea544\",\n    \"amount\": 500000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5050/api",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"api"
+							]
+						},
+						"description": "lint is optional parameter"
+					},
+					"response": []
+				},
+				{
+					"name": "create_block",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5050/create_block",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"create_block"
+							]
+						},
+						"description": "lint is optional parameter"
+					},
+					"response": []
+				},
+				{
+					"name": "fee_token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"0x6e3205f9b7c4328f00f718fdecf56ab31acfb3cd6ffeb999dcbac41236ea544\",\n    \"amount\": 500000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5050/fee_token",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5050",
+							"path": [
+								"fee_token"
+							]
+						},
+						"description": "lint is optional parameter"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RPC read 0.1.0",
+			"item": [
+				{
+					"name": "starknet_getBlockWithTxHashes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxHashes\",\n    \"params\": {\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getBlockWithTxHashes",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxHashes\",\n    \"params\": {\n        \"block_id\": {\n            \"block_hash\": \"0x5f04b230f8cfa360aaea938d003f8df4fb8afb599651acf24bedbe04c21f1\"\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getBlockWithTxHashes",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxHashes\",\n    \"params\": {\n        \"block_id\": {\n            \"block_number\": 1\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getBlockWithTxHashes",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxHashes\",\n    \"params\": {\n        \"block_id\": \"pending\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getBlockWithTxHashes",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxHashes\",\n    \"params\": {\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getBlockWithTxs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxs\",\n    \"params\": {\n        \"block_id\": \"pending\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getBlockWithTxs",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxs\",\n    \"params\": {\n        \"block_id\": {\n            \"block_hash\": \"0x5f04b230f8cfa360aaea938d003f8df4fb8afb599651acf24bedbe04c21f1\"\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getBlockWithTxs",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxs\",\n    \"params\": {\n        \"block_id\": {\n            \"block_number\": 1\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getBlockWithTxs",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxs\",\n    \"params\": {\n        \"block_id\": \"pending\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getBlockWithTxs",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockWithTxs\",\n    \"params\": {\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getStateUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStateUpdate\",\n    \"params\": {\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						},
+						"description": "Get the information about the result of executing the requested block"
+					},
+					"response": [
+						{
+							"name": "starknet_getStateUpdate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStateUpdate\",\n    \"params\": {\n        \"block_id\": {\n            \"block_hash\": \"0x5f04b230f8cfa360aaea938d003f8df4fb8afb599651acf24bedbe04c21f1\"\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getStateUpdate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStateUpdate\",\n    \"params\": {\n        \"block_id\": {\n            \"block_number\": 1\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getStateUpdate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStateUpdate\",\n    \"params\": {\n        \"block_id\": \"pending\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getStateUpdate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStateUpdate\",\n    \"params\": {\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getStorageAt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStorageAt\",\n    \"params\": {\n        \"contract_address\": \"0x01d1f307c073bb786a66e6e042ec2a9bdc385a3373bb3738d95b966d5ce56166\",\n        \"key\": \"0\",\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getStorageAt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStorageAt\",\n    \"params\": {\n        \"contract_address\": \"0x01d1f307c073bb786a66e6e042ec2a9bdc385a3373bb3738d95b966d5ce56166\",\n        \"key\": \"0\",\n        \"block_id\": {\n            \"block_hash\": \"0x7225762c7ff5e7e5f0867f0a8e73594df4f44f05a65375339a76398e8ae3e64\"\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getStorageAt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStorageAt\",\n    \"params\": {\n        \"contract_address\": \"0x01d1f307c073bb786a66e6e042ec2a9bdc385a3373bb3738d95b966d5ce56166\",\n        \"key\": \"0\",\n        \"block_id\": {\n            \"block_number\": \"0\"\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getStorageAt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStorageAt\",\n    \"params\": {\n        \"contract_address\": \"0x01d1f307c073bb786a66e6e042ec2a9bdc385a3373bb3738d95b966d5ce56166\",\n        \"key\": \"0\",\n        \"block_id\": \"pending\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getStorageAt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getStorageAt\",\n    \"params\": {\n        \"contract_address\": \"0x01d1f307c073bb786a66e6e042ec2a9bdc385a3373bb3738d95b966d5ce56166\",\n        \"key\": \"0\",\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getTransactionByHash",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getTransactionByHash\",\n    \"params\": {\n        \"transaction_hash\": \"0x58289a6dac52878dda80f7a6a44c8026abd042570161ddc331ffd68e14c0e5\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getTransactionByHash",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getTransactionByHash\",\n    \"params\": {\n        \"transaction_hash\": \"0x2a56c636f45761c99a67ecdf0f185a6d5fe5239924ed9a4886fddbfaf3227b\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getTransactionByBlockIdAndIndex",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getTransactionByBlockIdAndIndex\",\n    \"params\": {\n        \"block_id\": {\n            \"block_number\": 0\n        },\n        \"index\": 1\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getTransactionByBlockIdAndIndex",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getTransactionByBlockIdAndIndex\",\n    \"params\": {\n        \"block_id\": {\n            \"block_number\": 0\n        },\n        \"index\": 1\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getTransactionReceipt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getTransactionReceipt\",\n    \"params\": \n        {\n            \"transaction_hash\": \"0x58289a6dac52878dda80f7a6a44c8026abd042570161ddc331ffd68e14c0e5\"\n        }\n    ,\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc-infura}}",
+							"host": [
+								"{{rpc-infura}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getTransactionReceipt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getTransactionReceipt\",\n    \"params\": \n        {\n            \"transaction_hash\": \"0x70962afa989cd1bb26f475f2b1de4aaaf018c46223bf66158a71f10f3c56b40\"\n        }\n    ,\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getClass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getClass\",\n    \"params\": {\n        \"class_hash\": \"0x0733734fa0dab1158bccdfe0df7b0becf3827f908971fac8d39cc73d99ad8645\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getClass",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getClass\",\n    \"params\": {\n        \"class_hash\": \"0x0733734fa0dab1158bccdfe0df7b0becf3827f908971fac8d39cc73d99ad8645\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getClassHashAt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getClassHashAt\",\n    \"params\": {\n        \"block_id\": \"latest\",\n        \"contract_address\": \"0x071b216F2ec11cC081B5a4E9f50269D672ad6C8f11E87Ae8791a7CE7705fF7Ab\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getClassHashAt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getClassHashAt\",\n    \"params\": {\n        \"block_id\": \"latest\",\n        \"contract_address\": \"0x071b216F2ec11cC081B5a4E9f50269D672ad6C8f11E87Ae8791a7CE7705fF7Ab\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getClassAt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getClassAt\",\n    \"params\": {\n        \"block_id\": \"latest\",\n        \"contract_address\": \"0x3cf6ee6bf864164a149c22361b9c4f3855d186a004afe21de4b457424446b67\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getClassAt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getClassAt\",\n    \"params\": {\n        \"block_id\": \"latest\",\n        \"contract_address\": \"0x071b216F2ec11cC081B5a4E9f50269D672ad6C8f11E87Ae8791a7CE7705fF7Ab\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getBlockTransactionCount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockTransactionCount\",\n    \"params\": {\n        \"block_id\": {\n            \"block_number\": 0\n        }\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getBlockTransactionCount",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getBlockTransactionCount\",\n    \"params\": {\n        \"block_id\": {\n            \"block_number\": 0\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_call",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_call\",\n    \"params\": {\n        \"request\": {\n            \"contract_address\": \"0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7\",\n            \"entry_point_selector\": \"0x2e4263afad30923c891518314c3c95dbe830a16874e8abc5777a9a20b54c76e\",\n            \"calldata\": [\n                \"0x04c83d3fa770187d7b0a23b3aa7132c7c8273fb4ec3db416f86e4a385596769a\"\n            ]\n        },\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						},
+						"description": "call a starknet function without creating a StarkNet transaction"
+					},
+					"response": [
+						{
+							"name": "starknet_call",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_call\",\n    \"params\": {\n        \"request\": {\n            \"contract_address\": \"0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7\",\n            \"entry_point_selector\": \"0x2e4263afad30923c891518314c3c95dbe830a16874e8abc5777a9a20b54c76e\",\n            \"calldata\": [\n                \"0x04c83d3fa770187d7b0a23b3aa7132c7c8273fb4ec3db416f86e4a385596769a\"\n            ]\n        },\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_estimateFee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_estimateFee\",\n    \"params\": {\n        \"request\": {\n            \"contract_address\": \"0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7\",\n            \"entry_point_selector\": \"0x2e4263afad30923c891518314c3c95dbe830a16874e8abc5777a9a20b54c76e\",\n            \"calldata\": [\n                \"0x04c83d3fa770187d7b0a23b3aa7132c7c8273fb4ec3db416f86e4a385596769a\"\n            ]\n        },\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						},
+						"description": "call a starknet function without creating a StarkNet transaction"
+					},
+					"response": [
+						{
+							"name": "starknet_estimateFee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_estimateFee\",\n    \"params\": {\n        \"request\": {\n            \"contract_address\": \"0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7\",\n            \"entry_point_selector\": \"0x2e4263afad30923c891518314c3c95dbe830a16874e8abc5777a9a20b54c76e\",\n            \"calldata\": [\n                \"0x04c83d3fa770187d7b0a23b3aa7132c7c8273fb4ec3db416f86e4a385596769a\"\n            ]\n        },\n        \"block_id\": \"latest\"\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_blockNumber",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_blockNumber\",\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_blockNumber",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_blockNumber\",\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_blockHashAndNumber",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_blockHashAndNumber\",\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_blockHashAndNumber",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_blockHashAndNumber\",\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_chainId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_chainId\",\n    \"params\": [],\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_chainId",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_chainId\",\n    \"params\": [],\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_pendingTransactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_pendingTransactions\",\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_pendingTransactions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_pendingTransactions\",\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_syncing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_syncing\",\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_syncing",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_syncing\",\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_getEvents",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"from_block\": \"latest\",\n            \"to_block\": \"latest\",\n            \"key\": 111,\n            \"page_size\": 1,\n            \"page_number\": 1\n        }\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getEvents",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"page_size\": 1,         // Required\n            \"page_number\": 1        // required\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getEvents",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"from_block\": \"latest\", // optional\n            \"to_block\": \"latest\",   // optional\n            \"address\": \"\",          // optional\n            \"keys\": \"\",              // optional\n            \"page_size\": 1,         // Required\n            \"page_number\": 1        // required\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getEvents",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"from_block\": \"latest\",\n            \"to_block\": \"latest\",\n            \"page_size\": 1,\n            \"page_number\": 1\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "RPC trace 0.1.0",
+			"item": [
+				{
+					"name": "starknet_traceTransaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_traceTransaction\",\n    \"params\": {\n        \"transaction_hash\": \"0x6b0c190468f5b30d3c1a4df22b12d92657ea35625d3c7b8ddb6d00c0a76e813\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getEvents",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"page_size\": 1,         // Required\n            \"page_number\": 1        // required\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getEvents",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"from_block\": \"latest\", // optional\n            \"to_block\": \"latest\",   // optional\n            \"address\": \"\",          // optional\n            \"keys\": \"\",              // optional\n            \"page_size\": 1,         // Required\n            \"page_number\": 1        // required\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getEvents",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"from_block\": \"latest\",\n            \"to_block\": \"latest\",\n            \"page_size\": 1,\n            \"page_number\": 1\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "starknet_traceBlockTransactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_traceBlockTransactions\",\n    \"params\": {\n        \"block_hash\": \"0x344ac77d97bc16ba5fe64a072566bd316130d90bb3610e7058fe77f66437751\"\n    },\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rpc}}",
+							"host": [
+								"{{rpc}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "starknet_getEvents",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"page_size\": 1,         // Required\n            \"page_number\": 1        // required\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getEvents",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"from_block\": \"latest\", // optional\n            \"to_block\": \"latest\",   // optional\n            \"address\": \"\",          // optional\n            \"keys\": \"\",              // optional\n            \"page_size\": 1,         // Required\n            \"page_number\": 1        // required\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "starknet_getEvents",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"starknet_getEvents\",\n    \"params\": {\n        \"filter\": {\n            \"from_block\": \"latest\",\n            \"to_block\": \"latest\",\n            \"page_size\": 1,\n            \"page_number\": 1\n        }\n    },\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rpc}}",
+									"host": [
+										"{{rpc}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "RPC write 0.1.0",
+			"item": []
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://127.0.0.1:5050/rpc"
+		}
+	]
+}
